@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(218, 218, 218);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sosmed {
+    display: flex;
+    gap: 15px;
+}
+
+.sosmed img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.sosmed img:hover {
+    transform: scale(1.1);
+}
+
+/* Konten */
+.marhaban {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 80px; /* Biar gak ketutup navbar */
+}
+
+/* Ketupat */
+#ketupat {
+    width: 120px;
+    height: 120px;
+    background: url('https://www.pngmart.com/files/12/Ketupat-Dish-Transparent-Background.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+#ketupat:active {
+    transform: scale(0.9);
+    transform: translateY(-30px);
+}
+
+.ucapan {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s, transform 0.5s;
+    font-size: 24px;
+    font-weight: bold;
+    color: #047857;
+    margin-top: 20px;
+}
+
+#ketupat:active + .ucapan {
+    opacity: 1;
+    transform: translateY(-10);
+}
+
+
+
+.tian {color: black; font-size: small; padding-top: 1px; padding-right: 20px; padding-left: 20px;} 
+
+.lampu-gantung {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0px;
+    z-index: 999;
+    padding-top: 30;
+}
+
+.lampu-gantung img {
+    width: 100px;
+    height: auto;
+    animation: kedip 1.5s infinite alternate;
+}
+
+.lampu-gantung img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.lampu-gantung img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes kedip {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0.5; transform: translateY(5px); }
+}
+
+
+.fb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Biar lebih ke atas */
+    transform: translateY(-200px);
+    height: 100px; /* Atur tinggi sesuai kebutuhan */
+}
+
+.fb img {
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.fb img:hover {
+    transform: scale(1.1);
+}
